@@ -1,4 +1,4 @@
-fizzbuzz :: Integer -> [Char]
+fizzbuzz :: Integer -> String
 fizzbuzz 0 = ""
 fizzbuzz n
   | mod n 15 == 0 = fizzbuzz(n - 1) ++ "fizzbuzz"
@@ -6,7 +6,7 @@ fizzbuzz n
   | mod n  5 == 0 = fizzbuzz(n - 1) ++ "buzz"
 fizzbuzz n = fizzbuzz(n - 1) ++ show n
 
-fizzbuzzList :: [Integer] -> [Char]
+fizzbuzzList :: [Integer] -> String
 fizzbuzzList [] = ""
 fizzbuzzList l
   | last l `mod` 15 == 0 = fizzbuzzList(init l) ++ "fizzbuzz"
